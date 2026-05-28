@@ -139,22 +139,6 @@ Press F
 LCD shows: Stud#: 103 / Grade: 60
 ```
 
-## Repository Structure
-
-```text
-8086-Classroom-Grading-System/
-├── src/
-│   └── classroom_grading.asm
-├── docs/
-│   ├── project_statement.png
-│   ├── Classroom_Grading_Report.docx
-│   └── Classroom_Grading_Report.pdf
-├── examples/
-│   └── sample_input_output.txt
-├── README.md
-└── .gitignore
-```
-
 ## Requirements
 
 - 8086 Assembly environment.
@@ -176,6 +160,3 @@ LCD shows: Stud#: 103 / Grade: 60
 
 Bubble Sort has a time complexity of `O(N^2)`. Memory usage is `O(N)` because two arrays store student numbers and grades.
 
-## Author
-
-Ahmed Negm
