@@ -1,0 +1,17 @@
+# Assembly build and emulator outputs
+*.obj
+*.exe
+*.com
+*.lst
+*.map
+*.bin
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.log
+~$*
+
+# OS files
+.DS_Store
+Thumbs.db
