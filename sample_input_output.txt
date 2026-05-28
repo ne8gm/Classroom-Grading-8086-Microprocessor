@@ -1,0 +1,124 @@
+8086 Classroom Grading System - Sample Input and Output
+=======================================================
+
+Key rule used by the kit version:
+The physical F key works as the Enter/Confirm key.
+Do not press the normal keyboard Enter key when using the keypad flow.
+
+Meaning of the notation used below:
+5F means: type 5, then press the physical F key.
+101F means: type 101, then press the physical F key.
+95F means: type 95, then press the physical F key.
+
+After sorting, the LCD displays one result at a time.
+Press F after each displayed result to move to the next sorted student.
+
+-------------------------------------------------------
+Sample Run 1
+-------------------------------------------------------
+
+Input using keypad:
+
+Enter number of students:
+5F
+
+Enter student numbers:
+101F
+102F
+103F
+104F
+105F
+
+Enter student grades:
+75F
+90F
+60F
+85F
+95F
+
+Expected sorted order by grade descending:
+
+Console-style output:
+Student Number: 105, Grade: 95
+Student Number: 102, Grade: 90
+Student Number: 104, Grade: 85
+Student Number: 101, Grade: 75
+Student Number: 103, Grade: 60
+
+LCD result navigation:
+LCD shows: Stud#: 105 / Grade: 95
+Press F to show next result.
+LCD shows: Stud#: 102 / Grade: 90
+Press F to show next result.
+LCD shows: Stud#: 104 / Grade: 85
+Press F to show next result.
+LCD shows: Stud#: 101 / Grade: 75
+Press F to show next result.
+LCD shows: Stud#: 103 / Grade: 60
+
+-------------------------------------------------------
+Sample Run 2 - Equal Grade Case
+-------------------------------------------------------
+
+Input using keypad:
+
+Enter number of students:
+4F
+
+Enter student numbers:
+2201F
+2202F
+2203F
+2204F
+
+Enter student grades:
+88F
+72F
+99F
+88F
+
+Expected sorted order by grade descending:
+
+Console-style output:
+Student Number: 2203, Grade: 99
+Student Number: 2201, Grade: 88
+Student Number: 2204, Grade: 88
+Student Number: 2202, Grade: 72
+
+LCD result navigation:
+LCD shows: Stud#: 2203 / Grade: 99
+Press F to show next result.
+LCD shows: Stud#: 2201 / Grade: 88
+Press F to show next result.
+LCD shows: Stud#: 2204 / Grade: 88
+Press F to show next result.
+LCD shows: Stud#: 2202 / Grade: 72
+
+Note about equal grades:
+The code uses JGE to skip swapping when the current grade is greater than or equal to the next grade.
+Therefore, students with equal grades keep their original relative order.
+
+-------------------------------------------------------
+Sample Run 3 - Small Input
+-------------------------------------------------------
+
+Input using keypad:
+
+Enter number of students:
+3F
+
+Enter student numbers:
+11F
+22F
+33F
+
+Enter student grades:
+50F
+100F
+75F
+
+Expected sorted order by grade descending:
+
+Student Number: 22, Grade: 100
+Student Number: 33, Grade: 75
+Student Number: 11, Grade: 50
